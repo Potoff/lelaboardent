@@ -1,0 +1,42 @@
+---
+import '../styles/global.css';
+const {
+  title = 'Labo Ardent — Piment fumé & boissons vivantes d\'Ardèche',
+  description = 'Un petit labo en Ardèche. Piment fumé au bois de châtaignier et boissons vivantes, faits main en petits lots. Feu & ferment.',
+  path = '',
+} = Astro.props;
+const canonical = new URL(path, Astro.site).href;
+const ogImage = new URL('/og.png', Astro.site).href;
+---
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+  <meta name="theme-color" content="#241E1A" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Labo Ardent" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:locale" content="fr_FR" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Jost:wght@400;500;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <!-- filtre encre partagé -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <filter id="inkf"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="4" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/></filter>
+  </svg>
+  <slot />
+</body>
+</html>
