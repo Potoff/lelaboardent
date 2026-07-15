@@ -1,39 +1,40 @@
 ---
 import Base from '../layouts/Base.astro';
-import { sauces, lienAffilie } from '../data/sauces.js';
 ---
 <Base>
   <div class="top">
     <div class="brand">Labo Ardent</div>
     <nav>
-      <a href="#registre">Le registre</a>
       <a href="#feu">Feu</a>
       <a href="#ferment">Ferment</a>
-      <a href="#selection">La sélection</a>
+      <a href="#registre">Le registre</a>
       <a href="#trouver">Où me trouver</a>
     </nav>
     <div class="mono" style="font-size:11px">Sud Ardèche · 2026</div>
   </div>
 
-  <!-- HERO -->
-  <header class="hero">
-    <p class="ey">· Feu &amp; ferment ·</p>
-    <h1>Fumé.<br><em>Fermenté.</em><br><span class="out">Vivant.</span></h1>
-    <p class="lede">Un petit labo en Ardèche. Je fais du <b>piment fumé au bois de châtaignier</b> et des <b>boissons vivantes</b>. Que des petits lots, faits à la main, notés dans mon cahier.</p>
-    <a class="cta" href="#registre">Voir le registre →</a>
-
-    <div class="stampwrap ink" aria-hidden="true">
-      <svg viewBox="0 0 620 250">
-        <g fill="none" stroke="#B23A1C"><rect x="16" y="16" width="588" height="218" stroke-width="6"/><rect x="28" y="28" width="564" height="194" stroke-width="2"/></g>
-        <g fill="#B23A1C">
-          <text x="310" y="62" text-anchor="middle" font-family="Space Mono" font-weight="700" font-size="14" letter-spacing="6">· FEU &amp; FERMENT ·</text>
-          <text x="310" y="140" text-anchor="middle" font-family="Anton" font-size="76" letter-spacing="2">LABO ARDENT</text>
-          <text x="310" y="176" text-anchor="middle" font-family="Jost" font-weight="700" font-size="15" letter-spacing="3">PIMENTS FUMÉS &amp; BOISSONS VIVANTES</text>
-          <path d="M64 150 c 9 11 -2 17 3 26 c 7 -5 6 -16 2 -24 c 10 7 12 20 3 30 c -9 8 -22 2 -20 -11 c 1 -8 9 -10 12 -21 z"/>
-          <path d="M556 150 c 9 11 -2 17 3 26 c 7 -5 6 -16 2 -24 c 10 7 12 20 3 30 c -9 8 -22 2 -20 -11 c 1 -8 9 -10 12 -21 z"/>
-          <text x="310" y="206" text-anchor="middle" font-family="Space Mono" font-weight="400" font-size="12" letter-spacing="3">LOT _____ · FAIT MAIN · SUD ARDÈCHE · 2026</text>
-        </g>
-      </svg>
+  <!-- HERO photo -->
+  <header class="hero2">
+    <div class="txt">
+      <p class="ey">· Feu &amp; ferment ·</p>
+      <h1>Fumé.<br><em>Fermenté.</em><br><span class="out">Vivant.</span></h1>
+      <p class="lede">Un petit labo en Ardèche. Je fais du <b>piment fumé au bois de châtaignier</b> et des <b>boissons vivantes</b>. Que des petits lots, faits à la main.</p>
+      <a class="cta" href="#registre">Voir le registre →</a>
+    </div>
+    <div class="img" style="background-image:url('/img/hero.jpg')">
+      <div class="stamp2 ink" aria-hidden="true">
+        <svg viewBox="0 0 620 250">
+          <g fill="none" stroke="#EAE0CD"><rect x="16" y="16" width="588" height="218" stroke-width="6"/><rect x="28" y="28" width="564" height="194" stroke-width="2"/></g>
+          <g fill="#EAE0CD">
+            <text x="310" y="62" text-anchor="middle" font-family="Space Mono" font-weight="700" font-size="14" letter-spacing="6">· FEU &amp; FERMENT ·</text>
+            <text x="310" y="140" text-anchor="middle" font-family="Anton" font-size="76" letter-spacing="2">LABO ARDENT</text>
+            <text x="310" y="176" text-anchor="middle" font-family="Jost" font-weight="700" font-size="15" letter-spacing="3">PIMENTS FUMÉS &amp; BOISSONS VIVANTES</text>
+            <path d="M64 150 c 9 11 -2 17 3 26 c 7 -5 6 -16 2 -24 c 10 7 12 20 3 30 c -9 8 -22 2 -20 -11 c 1 -8 9 -10 12 -21 z"/>
+            <path d="M556 150 c 9 11 -2 17 3 26 c 7 -5 6 -16 2 -24 c 10 7 12 20 3 30 c -9 8 -22 2 -20 -11 c 1 -8 9 -10 12 -21 z"/>
+            <text x="310" y="206" text-anchor="middle" font-family="Space Mono" font-weight="400" font-size="12" letter-spacing="3">LOT _____ · FAIT MAIN · SUD ARDÈCHE · 2026</text>
+          </g>
+        </svg>
+      </div>
     </div>
   </header>
 
@@ -45,18 +46,24 @@ import { sauces, lienAffilie } from '../data/sauces.js';
     </div>
   </div>
 
-  <!-- DUO -->
-  <section class="duo">
-    <div class="pane feu" id="feu">
-      <div class="num">01 — Le feu</div>
-      <h2>Piments<br>fumés</h2>
-      <p>Séchés puis fumés au bois de châtaignier d'ici. Poudres, flocons, entiers. Du doux qui parfume au brutal qui réveille. Chaque lot a sa force, marquée sur le pot.</p>
-    </div>
-    <div class="pane fer" id="ferment">
-      <div class="num">02 — Le ferment</div>
-      <h2>Boissons<br>vivantes</h2>
-      <p>Ginger beer non pasteurisée, lancée au ginger bug maison. Ça fermente lentement, ça pétille tout seul, c'est vivant. Et d'autres ferments arrivent au labo.</p>
-    </div>
+  <!-- TUILES FEU / FERMENT -->
+  <section class="tiles">
+    <article class="tile feu" id="feu">
+      <div class="bg" style="background-image:url('/img/feu.jpg')"></div>
+      <div class="c">
+        <div class="k">Le feu</div>
+        <h2>Piments<br>fumés</h2>
+        <p>Séchés puis fumés au bois de châtaignier d'ici. Poudres, flocons, entiers. Du doux qui parfume au brutal qui réveille.</p>
+      </div>
+    </article>
+    <article class="tile fer" id="ferment">
+      <div class="bg" style="background-image:url('/img/ferment.jpg')"></div>
+      <div class="c">
+        <div class="k">Le ferment</div>
+        <h2>Boissons<br>vivantes</h2>
+        <p>Ginger beer non pasteurisée, lancée au ginger bug maison. Ça fermente lentement, ça pétille tout seul, c'est vivant.</p>
+      </div>
+    </article>
   </section>
 
   <!-- REGISTRE -->
@@ -98,41 +105,23 @@ import { sauces, lienAffilie } from '../data/sauces.js';
     </div>
   </section>
 
-  <!-- SCOVILLE -->
-  <section class="data-strip">
-    <div class="big">15K</div>
-    <div class="lab">
-      <span class="mono">Échelle de Scoville · lot 07·A</span>
-      <h3>Ça pique juste ce qu'il faut pour que tu te souviennes de qui l'a fait.</h3>
+  <!-- STORY photo -->
+  <section class="story2">
+    <div class="img" style="background-image:url('/img/story.jpg')"></div>
+    <div class="txt">
+      <p class="ey">· Le labo ·</p>
+      <h2>Tout se fait<br>à la main.</h2>
+      <p>Pas d'usine, pas de recette figée. Je fume, je sèche, je fais fermenter, je goûte, je note. <b>Un lot après l'autre, jusqu'à ce que ce soit bon.</b> C'est plus long, c'est vivant, et ça se sent.</p>
     </div>
   </section>
 
-  <!-- SÉLECTION (AFFILIATION) -->
-  <section class="select" id="selection">
-    <div class="h">
-      <h2>La sélection</h2>
-      <p class="sub">Mes coups de cœur, en attendant les miens. Les sauces que je garde dans mon placard.</p>
+  <!-- TROUVER photo -->
+  <section class="trouver" id="trouver">
+    <div class="bg" style="background-image:url('/img/market.jpg')"></div>
+    <div class="c">
+      <p class="ey">· Où me trouver ·</p>
+      <p>Pas en supermarché. Sur les <em>marchés du sud Ardèche</em>, en direct, et bientôt en ligne.</p>
     </div>
-    <p class="disc">Liens affiliés · j'touche une commission si tu achètes, ça me paie des piments</p>
-    <div class="saucegrid">
-      {sauces.map((s) => (
-        <article class="sauce">
-          <div class="bar"><span>{s.origine}</span><span class="fer">{s.scoville} SHU</span></div>
-          <div class="body">
-            <h3>{s.nom}</h3>
-            <div class="brand">{s.marque} · {s.profil}</div>
-            <p>{s.note}</p>
-            <a class="buy" href={lienAffilie(s.asin)} target="_blank" rel="sponsored nofollow noopener">Voir sur Amazon →</a>
-          </div>
-        </article>
-      ))}
-    </div>
-  </section>
-
-  <!-- STORY -->
-  <section class="story" id="trouver">
-    <p class="ey">· Où me trouver ·</p>
-    <p>Pas en supermarché. Sur les <b>marchés du sud Ardèche</b>, en direct, et bientôt en ligne. Tu goûtes, on parle, tu repars avec un pot qui a une histoire.</p>
   </section>
 
   <!-- FOOTER -->
@@ -150,9 +139,9 @@ import { sauces, lienAffilie } from '../data/sauces.js';
           </g>
         </svg>
       </div>
-      <div class="fcol"><b>Le labo</b><a href="#registre">Le registre</a><a href="#feu">Feu &amp; ferment</a><a href="#trouver">L'histoire</a></div>
-      <div class="fcol"><b>Trouver</b><a href="#trouver">Les marchés</a><a href="#selection">La sélection</a><a href="mailto:bonjour@laboardent.com">M'écrire</a></div>
-      <div class="fcol"><b>Suivre</b><a href="#">Instagram</a><a href="#">TikTok</a></div>
+      <div class="fcol"><b>Le labo</b><a href="#feu">Feu &amp; ferment</a><a href="#registre">Le registre</a><a href="#trouver">L'histoire</a></div>
+      <div class="fcol"><b>Trouver</b><a href="#trouver">Les marchés</a><a href="mailto:bonjour@laboardent.com">M'écrire</a></div>
+      <div class="fcol"><b>Infos</b><a href="/mentions-legales">Mentions légales</a><a href="#">Instagram</a><a href="#">TikTok</a></div>
     </div>
   </footer>
 </Base>
