@@ -1,0 +1,49 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+<Base
+  title="Les recettes du labo | Labo Ardent"
+  description="Les recettes maison du Labo Ardent : ginger beer au levain, poivrons grillés & pelés, et ce qui suit."
+  path="recettes/">
+
+  <div class="top">
+    <div class="brand"><a href="/">Labo Ardent</a></div>
+    <nav><a href="/recettes/">Les recettes</a><a href="/#registre">Le registre</a><a href="/#trouver">Où me trouver</a></nav>
+    <div class="mono" style="font-size:11px">Sud Ardèche · 2026</div>
+  </div>
+
+  <div class="rec-wrap">
+    <div class="rh">
+      <p class="up">· Le cahier ·</p>
+      <h1>Les recettes</h1>
+      <p>Ce que je fais au labo, écrit noir sur blanc. Rien de secret : tu prends, tu testes, tu adaptes. Fait main, à toi de jouer.</p>
+    </div>
+
+    <div class="reclist">
+      <a class="reccard" href="/recettes/ginger-beer">
+        <div class="im" style="background-image:url('/img/ferment.jpg')"></div>
+        <div class="b">
+          <div class="k">Boisson · au levain</div>
+          <h3>Ginger beer sauvage</h3>
+          <p>Non pasteurisée, vivante, pétillante. La recette au litre, la dose de bug et le truc pour ne pas faire exploser la bouteille.</p>
+        </div>
+      </a>
+      <a class="reccard" href="/recettes/poivrons-grilles">
+        <div class="im" style="background-image:url('/img/poivrons.jpg')"></div>
+        <div class="b">
+          <div class="k">Piment · la base</div>
+          <h3>Poivrons grillés &amp; pelés</h3>
+          <p>Grillés jusqu'au noir puis pelés. La technique de base, et deux suites : les faire fermenter ou en salade andalouse.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="inner">
+      <div class="fcol"><b>Le labo</b><a href="/#feu">Piments &amp; boissons</a><a href="/#registre">Le registre</a><a href="/recettes/">Les recettes</a></div>
+      <div class="fcol"><b>Trouver</b><a href="/#trouver">Les marchés</a><a href="mailto:contact@paul-dem.com">M'écrire</a></div>
+      <div class="fcol"><b>Infos</b><a href="/mentions-legales">Mentions légales</a></div>
+    </div>
+  </footer>
+</Base>
