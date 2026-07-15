@@ -38,5 +38,17 @@ const ogImage = new URL('/og.png', Astro.site).href;
     <filter id="inkf"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="4" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/></filter>
   </svg>
   <slot />
+  <script>
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const els = document.querySelectorAll('.hero2 .txt, .tile .c, .reg .h, .story2 .txt, .trouver .c');
+      els.forEach((el) => el.classList.add('reveal'));
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+      els.forEach((el) => io.observe(el));
+    }
+  </script>
 </body>
 </html>

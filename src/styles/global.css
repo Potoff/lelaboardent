@@ -241,3 +241,13 @@ body{
 /* flèche tracée main */
 .hand-arrow{display:inline-block;vertical-align:middle;margin-left:6px}
 .hand-arrow path{stroke:var(--ardent);stroke-width:2.5;fill:none;stroke-linecap:round}
+
+/* ====== animations discrètes (carnet de labo) ====== */
+@media (prefers-reduced-motion: no-preference){
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  .hand-arrow path{stroke-dasharray:96;stroke-dashoffset:96;transition:stroke-dashoffset .9s ease .35s}
+  .hero2 .txt.in .hand-arrow path{stroke-dashoffset:0}
+  .fiche{transition:box-shadow .2s ease, transform .2s ease}
+  .fiche:hover{box-shadow:0 14px 30px rgba(0,0,0,.35)}
+}
