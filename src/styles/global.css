@@ -53,8 +53,8 @@ a{color:inherit;text-decoration:none}
 .pane.fer p{color:#cdbfa6}
 
 /* registre */
-.reg{background:var(--charbon);color:var(--kraft);padding:110px 30px 120px}
-.reg .inner{max-width:1280px;margin:0 auto}
+.reg{background:var(--charbon);color:var(--kraft);padding:110px 30px 120px;min-height:100vh;display:flex;align-items:center}
+.reg .inner{max-width:1280px;margin:0 auto;width:100%}
 .reg .h{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:38px;border-bottom:2px solid #4a4038;padding-bottom:18px}
 .reg .h h2{font-family:"Anton";text-transform:uppercase;font-weight:400;font-size:clamp(42px,8vw,96px);line-height:.85;color:var(--kraft)}
 .reg .h .sub{font-family:"Space Mono";font-size:12px;color:#9a8f7c;max-width:280px;text-transform:uppercase;letter-spacing:.08em}
@@ -127,7 +127,7 @@ footer .fcol a{display:block;color:#cdbfa6;margin-bottom:7px;text-transform:uppe
 @media(prefers-reduced-motion:reduce){.marq .track{animation:none}html{scroll-behavior:auto}.tile:hover .bg{transform:none}}
 
 /* ====== v2 : porté par la photo ====== */
-.hero2{display:grid;grid-template-columns:1.05fr .95fr;min-height:86vh;border-bottom:3px solid var(--charbon)}
+.hero2{display:grid;grid-template-columns:1.05fr .95fr;min-height:100vh;border-bottom:3px solid var(--charbon)}
 .hero2 .txt{padding:6vh 5vw;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:3}
 .hero2 .ey{color:var(--ardent);font-family:"Space Mono";font-weight:700;font-size:13px;letter-spacing:.3em;text-transform:uppercase;margin-bottom:18px}
 .hero2 h1{font-family:"Anton";text-transform:uppercase;font-weight:400;line-height:.9;letter-spacing:-.005em;font-size:clamp(52px,7vw,108px);color:var(--charbon)}
@@ -141,7 +141,7 @@ footer .fcol a{display:block;color:#cdbfa6;margin-bottom:7px;text-transform:uppe
 .stamp2 svg{width:100%;height:auto}
 
 .tiles{display:grid;grid-template-columns:1fr 1fr;border-bottom:3px solid var(--charbon)}
-.tile{position:relative;min-height:78vh;display:flex;align-items:flex-end;overflow:hidden}
+.tile{position:relative;min-height:100vh;display:flex;align-items:flex-end;overflow:hidden}
 .tile .bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .5s ease}
 .tile:hover .bg{transform:scale(1.05)}
 .tile::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(20,16,14,.92),rgba(20,16,14,.2) 58%,rgba(20,16,14,.05))}
@@ -153,14 +153,14 @@ footer .fcol a{display:block;color:#cdbfa6;margin-bottom:7px;text-transform:uppe
 .tile:first-child{border-right:3px solid var(--charbon)}
 
 .story2{display:grid;grid-template-columns:1fr 1fr;background:var(--charbon);color:var(--kraft)}
-.story2 .img{background-size:cover;background-position:center;min-height:78vh}
+.story2 .img{background-size:cover;background-position:center;min-height:100vh}
 .story2 .txt{padding:12vh 6vw;display:flex;flex-direction:column;justify-content:center}
 .story2 .ey{font-family:"Space Mono";text-transform:uppercase;letter-spacing:.24em;font-size:12px;color:var(--ferment);margin-bottom:20px}
 .story2 h2{font-family:"Anton";text-transform:uppercase;font-weight:400;font-size:clamp(34px,4.5vw,60px);line-height:.92;margin-bottom:22px}
 .story2 p{font-size:17px;line-height:1.65;color:#cdbfa6;max-width:460px}
 .story2 p b{color:var(--kraft);font-weight:500}
 
-.trouver{position:relative;min-height:70vh;display:flex;align-items:center;overflow:hidden;border-top:3px solid var(--charbon)}
+.trouver{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;border-top:3px solid var(--charbon)}
 .trouver .bg{position:absolute;inset:0;background-size:cover;background-position:center}
 .trouver::after{content:"";position:absolute;inset:0;background:rgba(18,14,12,.64)}
 .trouver .c{position:relative;z-index:1;max-width:780px;margin:0 auto;text-align:center;padding:40px 30px;color:var(--kraft)}
@@ -185,6 +185,10 @@ footer .fcol a{display:block;color:#cdbfa6;margin-bottom:7px;text-transform:uppe
   .tile:first-child{border-right:none;border-bottom:3px solid var(--charbon)}
   .story2{grid-template-columns:1fr}
   .story2 .img{min-height:38vh;order:-1}
+  .hero2{min-height:auto}
+  .tile{min-height:66vh}
+  .trouver{min-height:66vh}
+  .reg{min-height:auto;display:block}
 }
 
 /* fiche cliquable */
